@@ -41,5 +41,17 @@ public class HomePageRightTest extends Basetest {
 		obj.uploadFile();
 		Thread.sleep(3000);
 	}
+	
+	@Test
+	public void testAlerts() throws InterruptedException {
+		RightSideobject obj = new RightSideobject(driver);
+		obj.handleSimpleAlert();
+		obj.handleconfirmAlert();
+		obj.handlepromptAlert();
+		BrowserUtility.scrollDown();
+		obj.handleTab();
+		Thread.sleep(3000);
+		obj.handleWindow();
+	}
 
 }
